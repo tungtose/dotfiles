@@ -26,4 +26,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 source ~/.zshrc
 
 # Exa
+sudo add-apt-repository ppa:spvkgn/exa
+sudo apt update -y
 sudo apt install exa -y
