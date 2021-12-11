@@ -1,5 +1,15 @@
 #!/bin/sh
 
+#Exa
+sudo add-apt-repository ppa:spvkgn/exa -y
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:neovim-ppa/stable
+sudo apt update -y
+sudo apt install exa -y
+sudo apt-get update -y
+# Install NeoVim
+sudo apt-get install -y neovim
+
 # Install grep
 sudo apt install ripgrep
 
@@ -11,13 +21,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Python
-sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+sudo apt-get install python-dev python-pip python3-dev python3-pip -y
 
-# Install NeoVim
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo apt-get update -y
-sudo apt-get install -y neovim
 
 # Zsh
 sudo apt install zsh -y
@@ -25,7 +30,3 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 source ~/.zshrc
 
-# Exa
-sudo add-apt-repository ppa:spvkgn/exa -y
-sudo apt update -y
-sudo apt install exa -y
