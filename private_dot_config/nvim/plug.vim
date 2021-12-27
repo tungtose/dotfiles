@@ -15,6 +15,7 @@ if has("nvim")
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/nvim-lsp-installer'
   Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
   Plug 'folke/lsp-colors.nvim'
   Plug 'L3MON4D3/LuaSnip'
@@ -36,6 +37,8 @@ if has("nvim")
   Plug 'simrat39/rust-tools.nvim'
   Plug 'mfussenegger/nvim-dap'
 
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+
   Plug 'jparise/vim-graphql'
   Plug 'hashivim/vim-terraform'
 
@@ -43,10 +46,10 @@ if has("nvim")
   
   " Comment 
   Plug 'numToStr/Comment.nvim'
+  
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
 
