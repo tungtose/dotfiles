@@ -32,6 +32,12 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
+" Quickly insert semicolon at end of line
+noremap <leader>; maA;<esc>`a
+
+" Quickly insert comma at end of line
+noremap <leader>, maA,<esc>`a
+
 " Save file
 nnoremap <leader>w :w<CR>
 
