@@ -16,12 +16,13 @@ if has("nvim")
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/nvim-lsp-installer'
-  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
+  " Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
   Plug 'folke/lsp-colors.nvim'
   Plug 'L3MON4D3/LuaSnip'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-path'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'onsails/lspkind-nvim'
@@ -33,6 +34,7 @@ if has("nvim")
   Plug 'ryanoasis/vim-devicons'
   Plug 'mattn/emmet-vim'
   
+  Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
   Plug 'rust-lang/rust.vim'
   Plug 'simrat39/rust-tools.nvim'
   Plug 'mfussenegger/nvim-dap'
@@ -48,8 +50,6 @@ if has("nvim")
   Plug 'numToStr/Comment.nvim'
   
 endif
-
-Plug 'groenewege/vim-less', { 'for': 'less' }
 
 call plug#end()
 
