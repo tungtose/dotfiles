@@ -31,6 +31,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'mattn/emmet-vim'
   
@@ -45,7 +46,8 @@ if has("nvim")
   Plug 'hashivim/vim-terraform'
 
   Plug 'gruvbox-community/gruvbox'
-  
+  Plug 'navarasu/onedark.nvim'
+
   " Comment 
   Plug 'numToStr/Comment.nvim'
   

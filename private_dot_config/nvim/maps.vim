@@ -4,6 +4,7 @@ let mapleader = " "
 
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_transparent_bg=1
+let g:NERDTreeGitStatusUseNerdFonts = 1
 
 nnoremap <S-C-p> "0p
 nmap <leader>bb <C-^><CR>

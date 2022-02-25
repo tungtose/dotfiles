@@ -86,10 +86,20 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
   let g:gruvbox_transparent_bg=1
-  colorscheme gruvbox
+  let g:onedark_config = {
+  \ 'style': 'darker',
+  \ 'term_color': v:true,
+  \ 'toggle_style_key': '<leader>ts',
+  \ 'ending_tildes': v:true,
+  \ 'diagnostics': {
+    \ 'darker': v:false,
+    \ 'background': v:false,
+  \ },
+\ }
+  colorscheme  onedark
 endif
 "Transparency background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 "}}}
 
