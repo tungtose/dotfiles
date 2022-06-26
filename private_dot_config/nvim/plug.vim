@@ -45,11 +45,22 @@ if has("nvim")
   Plug 'jparise/vim-graphql'
   Plug 'hashivim/vim-terraform'
 
-  Plug 'gruvbox-community/gruvbox'
+  " Plug 'gruvbox-community/gruvbox'
   Plug 'navarasu/onedark.nvim'
 
   " Comment 
   Plug 'numToStr/Comment.nvim'
+
+  " Indent
+  Plug 'lukas-reineke/indent-blankline.nvim'
+
+  " Clojure
+  Plug 'Olical/conjure'
+  " Structural editing for lisp languages
+  Plug 'guns/vim-sexp'
+  Plug 'tpope/vim-sexp-mappings-for-regular-people'
+  " Auto-close parens
+  Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
   
 endif
 
