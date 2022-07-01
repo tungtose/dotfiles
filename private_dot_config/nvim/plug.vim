@@ -1,5 +1,4 @@
 
-   
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
@@ -57,10 +56,10 @@ if has("nvim")
   " Clojure
   Plug 'Olical/conjure'
   " Structural editing for lisp languages
-  Plug 'guns/vim-sexp'
-  Plug 'tpope/vim-sexp-mappings-for-regular-people'
+  " Plug 'guns/vim-sexp'
+  " Plug 'tpope/vim-sexp-mappings-for-regular-people'
   " Auto-close parens
-  Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
+  " Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
   
 endif
 
