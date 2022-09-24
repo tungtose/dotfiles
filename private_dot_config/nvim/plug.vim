@@ -23,6 +23,7 @@ if has("nvim")
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-path'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'onsails/lspkind-nvim'
   Plug 'nvim-lua/popup.nvim'
@@ -44,7 +45,6 @@ if has("nvim")
   Plug 'jparise/vim-graphql'
   Plug 'hashivim/vim-terraform'
 
-  " Plug 'gruvbox-community/gruvbox'
   Plug 'navarasu/onedark.nvim'
 
   " Comment 
@@ -53,14 +53,8 @@ if has("nvim")
   " Indent
   Plug 'lukas-reineke/indent-blankline.nvim'
 
-  " Clojure
-  Plug 'Olical/conjure'
-  " Structural editing for lisp languages
-  " Plug 'guns/vim-sexp'
-  " Plug 'tpope/vim-sexp-mappings-for-regular-people'
-  " Auto-close parens
-  " Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
-  
+  Plug 'towolf/vim-helm'
+
 endif
 
 call plug#end()

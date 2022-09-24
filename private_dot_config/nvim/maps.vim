@@ -1,4 +1,4 @@
-" Descriptio: Keymaps
+" Description: Keymaps
 
 let mapleader = " "
 let maplocalleader=" "
@@ -71,8 +71,6 @@ vnoremap <leader>d "_d
 
 " Open current directory
 nmap te :tabedit 
-nmap tn :tabnew %<Return>
-nmap tq :tabclose %<Return>
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
