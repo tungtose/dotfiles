@@ -40,7 +40,7 @@ if has("nvim")
   Plug 'simrat39/rust-tools.nvim'
   Plug 'mfussenegger/nvim-dap'
 
-  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+  " Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
   Plug 'jparise/vim-graphql'
   Plug 'hashivim/vim-terraform'

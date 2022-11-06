@@ -65,6 +65,9 @@ nnoremap x "_x
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
+" terminal remap:
+tnoremap <Esc><Esc> <C-\><c-n>
+
 
 "-----------------------------
 " Tabs

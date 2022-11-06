@@ -34,7 +34,6 @@ lua <<EOF
       { name = "nvim_lsp" },
       { name = "path" },
       { name = "buffer", keyword_length = 5 },
-      { name = "cmp_tabnine" },
     },
 
 
@@ -46,7 +45,6 @@ lua <<EOF
           buffer = "[Buffer]",
           nvim_lsp = "[LSP]",
           nvim_lua = "[Lua]",
-          cmp_tabnine = "[TN]",
           path = "[Path]",
         }
      })
@@ -55,4 +53,3 @@ lua <<EOF
 
   vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
 EOF
-

@@ -3,11 +3,12 @@ local handlers =  {
   ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = 'rounded'}),
 }
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
-if status_ok then
-  capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-end
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+-- if status_ok then
+--   capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- end
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.preselectSupport = true
@@ -27,6 +28,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 -- npm install -g typescript typescript-language-server
 require'lspconfig'.tsserver.setup({
   handlers = handlers,
+  -- cmd = { "~/.nvm/versions/node/v16.13.0/bin/typescript-language-server", "--stdio" },
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = true
