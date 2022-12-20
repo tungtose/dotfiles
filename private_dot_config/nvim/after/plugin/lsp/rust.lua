@@ -19,7 +19,7 @@ require'lspconfig'.rust_analyzer.setup {
 local opts = {
   tools = {
     autoSetHints = true,
-    hover_with_actions = true,
+    -- hover_with_actions = true,
     runnable = {
       use_telescope = true
     },
@@ -63,6 +63,12 @@ local opts = {
   },
 
   server = {
+    on_attach = function(_, bufnr)
+     -- Hover actions
+     vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+     -- Code action groups
+     vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end, 
     settings = {
       ["rust-analyzer"] = {
         checkOnSave = {
