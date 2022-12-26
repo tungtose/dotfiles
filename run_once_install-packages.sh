@@ -1,9 +1,8 @@
 #!/bin/sh
-
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update -y
-# sudo apt-get install exa -y
+
 # Install NeoVim
 sudo apt-get install -y neovim
 
@@ -13,13 +12,8 @@ sudo apt-get install ripgrep -y
 # g++
 sudo apt install g++ -y
 
-# VimPlug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
 # Python
 # sudo apt-get install python-dev python-pip python3-dev python3-pip -y
-
 
 # Zsh
 sudo apt install zsh -y
