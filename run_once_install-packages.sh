@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#Exa
-# sudo add-apt-repository ppa:spvkgn/exa -y
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update -y
