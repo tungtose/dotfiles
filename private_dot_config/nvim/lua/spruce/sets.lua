@@ -31,3 +31,8 @@ vim.opt.termguicolors = true
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = 'menuone,noselect'
 
+-- Set relative
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2

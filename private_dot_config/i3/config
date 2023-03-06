@@ -212,6 +212,9 @@ default_floating_border pixel 1
 
 bindsym $mod+shift+x exec i3lock
 
+# Change screen resolution
+exec xrandr --output DP-0 --mode 2560x1440 --rate 165
+
 exec setxkbmap -layout us -option caps:escape
 exec alacritty
 exec google-chrome

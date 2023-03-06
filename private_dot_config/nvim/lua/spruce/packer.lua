@@ -36,6 +36,9 @@ require('packer').startup(function(use)
 
       -- Additional lua configuration, makes nvim stuff amazing
       'folke/neodev.nvim',
+
+      -- Linter
+      'jose-elias-alvarez/null-ls.nvim'
     },
   }
 

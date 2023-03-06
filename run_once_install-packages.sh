@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
+sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt-get update -y
 
 # Install NeoVim
@@ -16,8 +16,7 @@ sudo apt install g++ -y
 # sudo apt-get install python-dev python-pip python3-dev python3-pip -y
 
 # Zsh
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-source ~/.zshrc
-
+# sudo apt install zsh -y
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# source ~/.zshrc
