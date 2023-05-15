@@ -212,6 +212,13 @@ default_floating_border pixel 1
 
 bindsym $mod+shift+x exec i3lock
 
+#Bind media player buttons
+bindsym $mod+p exec "$HOME/scripts/mediakeysHandle.sh play-pause";
+bindsym XF86AudioStop exec "$HOME/scripts/mediakeysHandle.sh stop";
+bindsym $mod+Shift+n exec "$HOME/scripts/mediakeysHandle.sh previous";
+bindsym $mod+n exec "$HOME/scripts/mediakeysHandle.sh next";
+# bindsym $mod+d exec dmenu_run
+
 # Change screen resolution
 exec xrandr --output DP-0 --mode 2560x1440 --rate 165
 
