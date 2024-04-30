@@ -1,0 +1,13 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+# cargo.features = "all"
+# check = { command = "clippy" }
+
+# [language.config]
+
+# TODO make this work
+[[language]]
+name = "toml"
+auto-format = true

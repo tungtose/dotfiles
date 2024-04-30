@@ -1,0 +1,53 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+          "hyprland/workspaces",
+          "temperature",
+    ],
+    "modules-center": [
+          "clock",
+    ],
+    "modules-right": [
+          "pulseaudio",
+          "memory",
+          "cpu",
+          "network",
+          "tray"
+    ],
+        "hyprland/workspaces": {
+          "format": "{name}",
+          "on-click": "activate",
+        },
+        "pulseaudio": {
+          "scroll-step": 1,
+          "format": "{icon} {volume}%",
+          "format-muted": "Muted",
+          "format-icons": {
+            "default": [ "", "", "" ],
+          },
+          "on-click": "pamixer -t",
+          "tooltip": false,
+        },
+
+        "memory" : {
+          "interval" : 3,
+          "format" : "󰍛 {percentage}%",
+          "states" : {
+            "warning" : 85,
+          },
+        },
+        "cpu" : {
+          "interval" : 5,
+          "format" : "󰘚 {usage}%",
+        },
+        "network" : {
+          "interval" : 5,
+          "format-wifi" : " {essid}",
+          "format-ethernet" : "󰈁 {ifname} ({ipaddr})",
+          "format-linked" : "󱚵 {essid} (No IP)",
+          "format-disconnected" : "Disconnected",
+          "tooltip" : false,
+        },
+
+}
