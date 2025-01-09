@@ -1,0 +1,84 @@
+{
+    "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.31/schema.bar.json",
+    "monitor": {
+      "index": 0,
+      "work_area_offset": {
+        "left": 0,
+        "top": 40,
+        "right": 0,
+        "bottom": 40
+      }
+    },
+    "font_family": "JetBrains Mono",
+    "transparency_alpha": 0,
+    "theme": {
+      "palette": "Base16",
+      "name": "Onedark",
+      "accent": "Base0D"
+    },
+    "grouping": {
+      "kind": "Widget",
+      "style": "DefaultWithShadowB4O1S3",
+      "rounding": 5,
+      "transparency_alpha": 255
+    },
+    "left_widgets": [
+      {
+        "Komorebi": {
+          "workspaces": {
+            "enable": true,
+            "hide_empty_workspaces": false
+          },
+          "layout": {
+            "enable": false
+          },
+          "focused_window": {
+            "enable": true,
+            "show_icon": true
+          }
+        }
+      }
+    ],
+    "right_widgets": [
+      {
+        "Media": {
+          "enable": true
+        }
+      },
+      {
+        "Storage": {
+          "enable": false
+        }
+      },
+      {
+        "Memory": {
+          "enable": true
+        }
+      },
+      {
+        "Network": {
+          "enable": true,
+          "show_total_data_transmitted": true,
+          "show_network_activity": false
+        }
+      },
+      {
+        "Date": {
+          "enable": true,
+          "format": "DayDateMonthYear"
+        }
+      },
+      {
+        "Time": {
+          "enable": true,
+          "format": "TwentyFourHour"
+        }
+      },
+      {
+        "Battery": {
+          "enable": false
+        }
+      }
+    ]
+  }
+  
