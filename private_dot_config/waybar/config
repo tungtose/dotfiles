@@ -12,9 +12,31 @@
           "pulseaudio",
           "memory",
           "cpu",
+          "battery",
           "network",
+          "custom/tun0-ip",
+          "custom/target-host",
           "tray"
     ],
+      "custom/tun0-ip": {
+          "exec": "ip addr show tun0 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1 2>/dev/null || echo 'No VPN'",
+          "interval": 10,
+          "format": "󰒄 {}",
+          "on-click": "echo -n $(ip addr show tun0 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1 2>/dev/null || echo 'No VPN') | wl-copy",
+          "tooltip": false
+      },
+ "custom/target-host": {
+      "exec": "grep 'target' /etc/hosts | awk '{print $1}' | head -1",
+      "interval": 10,
+      "format": "󰓾 {}",
+      "on-click": "echo -n $(grep 'target' /etc/hosts | awk '{print $1}' | head -1) | wl-copy",
+      "tooltip": false
+  },
+"clock": {
+        "format": "{:%H:%M %Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
         "hyprland/workspaces": {
           "format": "{name}",
           "on-click": "activate",
@@ -41,9 +63,20 @@
           "interval" : 5,
           "format" : "󰘚 {usage}%",
         },
+        "battery": {
+          "interval": 10,
+          "states": {
+            "warning": 30,
+            "critical": 15
+          },
+          "format": "{icon} {capacity}%",
+          "format-charging": "󰂄 {capacity}%",
+          "format-plugged": "󰚥 {capacity}%",
+          "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        },
         "network" : {
           "interval" : 5,
-          "format-wifi" : " {essid}",
+          "format-wifi" : "  {essid}",
           "format-ethernet" : "󰈁 {ifname} ({ipaddr})",
           "format-linked" : "󱚵 {essid} (No IP)",
           "format-disconnected" : "Disconnected",

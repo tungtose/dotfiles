@@ -1,6 +1,6 @@
 * {
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 12pt;
+  font-family: "MonoLisa";
+  font-size: 11;
   font-weight: bold;
   border-radius: 0px;
   transition-property: background-color;
@@ -20,7 +20,7 @@
   animation-direction: alternate;
 }
 window#waybar {
-   background: rgb(40, 44, 52);
+   background: #00000;
    color: white;
 }
 #workspaces {
@@ -28,11 +28,11 @@ window#waybar {
   padding-right: 4px;
 }
 #workspaces button {
-   padding: 0 5px;
+   padding: 0 2px;
 }
 #workspaces button.active {
-  background-color: rgb(181, 232, 224);
-  color: rgb(26, 24, 38);
+  background-color: rgb(0, 0, 0);
+  color: rgb(150, 205, 251);
 }
 #workspaces button.urgent {
   color: rgb(26, 24, 38);
@@ -71,6 +71,7 @@ tooltip label {
 #clock {
   color: rgb(217, 224, 238);
 }
+
 /* #idle_inhibitor {
   color: rgb(221, 182, 242);
 }*/
@@ -90,6 +91,18 @@ tooltip label {
   color: #ABE9B3;
 }
 
+#custom-tun0-ip {
+  color: rgb(150, 205, 251);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-target-host {
+  color: rgb(248, 189, 150);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #network.disconnected {
   color: rgb(255, 255, 255);
 }
@@ -107,5 +120,5 @@ tooltip label {
   padding-left: 10px;
 }
 #custom-cava-internal{
-  font-family: "Hack Nerd Font" ;
+  font-family: "FiraCode Nerd Font" ;
 }

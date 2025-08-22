@@ -16,7 +16,7 @@ return {
 		}
 
 		configs.setup({
-			ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust", "wgsl" },
+			ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust", "wgsl", "python" },
 			sync_install = false,
 			auto_install = true,
 			ignore_install = { "" }, -- List of parsers to ignore installing

@@ -5,8 +5,8 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				icons_enabled = false,
-				theme = "onedark",
+				icons_enabled = true,
+        theme = "lackluster",
 				component_separators = "|",
 				section_separators = "",
 			},

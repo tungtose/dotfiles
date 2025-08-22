@@ -136,7 +136,7 @@ keybinds clear-defaults=true {
     shared_except "locked" "tab" "tmux" {
         bind "Ctrl t" { SwitchToMode "tmux"; }
     }
-    shared_except "locked" "resize" "normal" {
+    shared_except "locked" "resize" {
         bind "Ctrl r" { SwitchToMode "resize"; }
     }
     shared_except "normal" "locked" "entersearch" {
@@ -244,7 +244,7 @@ simplified_ui true
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "xxx"
+theme "one-half-dark"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -261,8 +261,8 @@ default_shell "fish"
 // default_cwd "/tmp"
  
 // The name of the default layout to load on startup
-// 
 // Default: "default"
+// 
 // default_layout "compact"
  
 // The folder in which Zellij will look for layouts
@@ -345,7 +345,7 @@ pane_frames false
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-scrollback_editor "/bin/nvim"
+// scrollback_editor "/usr/bin/vim"
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`

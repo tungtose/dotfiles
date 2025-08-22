@@ -8,25 +8,48 @@ return {
   config = function(client, bufnr)
     local lsp_zero = require('lsp-zero')
 
-    require('lspconfig').tsserver.setup({})
+    require('lspconfig').ts_ls.setup({})
 
-    require('lspconfig').rust_analyzer.setup ({
+    --[[ require('lspconfig').rust_analyzer.setup ({ ]]
+    --[[   settings = { ]]
+    --[[     ['rust-analyzer'] = { ]]
+    --[[       diagnostics = { ]]
+    --[[         enable = true, ]]
+    --[[         experimental = { ]]
+    --[[           enable = true, ]]
+    --[[         }, ]]
+    --[[         styleLints = { ]]
+    --[[           enable = true, ]]
+    --[[         } ]]
+    --[[       }, ]]
+    --[[       cargo = { ]]
+    --[[         allFeatures = true, ]]
+    --[[       }, ]]
+    --[[     }, ]]
+    --[[   }, ]]
+    --[[ }) ]]
+
+    require('lspconfig').pyright.setup {
       settings = {
-        ['rust-analyzer'] = {
-          diagnostics = {
-            enable = true,
-            experimental = {
-              enable = true,
-            },
-            styleLints = {
-              enable = true,
-            }
-          },
-          cargo = {
-            allFeatures = true,
+        pyright = {
+          -- Using Ruff's import organizer
+          disableOrganizeImports = true,
+        },
+        python = {
+          analysis = {
+            -- Ignore all files for analysis to exclusively use Ruff for linting
+            ignore = { '*' },
           },
         },
       },
+    }
+
+    require('lspconfig').ruff.setup({
+      init_options = {
+        settings = {
+          -- Ruff language server settings go here
+        }
+      }
     })
 
     lsp_zero.on_attach(function(client, bufnr)
@@ -50,7 +73,7 @@ return {
       },
       servers = {
         ['tsserver'] = { 'javascript', 'typescript', 'typescriptreact' },
-        ["rust-analyzer"] = { "rust" },
+        --[[ ["rust-analyzer"] = { "rust" }, ]]
       }
     })
 
